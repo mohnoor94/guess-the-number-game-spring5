@@ -6,4 +6,9 @@
 
     <bean id="numberGenerator" class="guru.noor.NumberGeneratorImpl"/>
 
+    <bean id="game" class="guru.noor.GameImpl">
+        <!-- inject a bean of the referenced bean in the constructor -->
+        <constructor-arg ref="numberGenerator"/>
+    </bean>
+
 </beans>
