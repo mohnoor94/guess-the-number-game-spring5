@@ -1,6 +1,6 @@
 package guru.noor.console;
 
-import guru.noor.AppConfig;
+import guru.noor.config.AppConfig;
 import guru.noor.MessageGenerator;
 import guru.noor.NumberGenerator;
 import org.slf4j.Logger;
