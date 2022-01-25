@@ -4,8 +4,16 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
+    <!--    In beans, we can have:-->
+    <!--    default-init-method="reset"-->
+
     <bean id="numberGenerator" class="guru.noor.NumberGeneratorImpl"/>
 
+    <!--    Bean lifecycle callbacks:-->
+    <!--    - init-method-->
+    <!--    - destroy-method-->
+    <!--    ** We can set them using annotations in the classes too (better than XML ofc).-->
+    <!--    but we need to define CommonAnnotationBeanPostProcessor bean and use the javax annotations api dependency-->
     <bean id="game" class="guru.noor.GameImpl">
         <!-- inject a bean of the referenced bean in the constructor -->
         <!-- <constructor-arg ref="numberGenerator"/> -->
@@ -14,4 +22,5 @@
         <property name="numberGenerator" ref="numberGenerator"/>
     </bean>
 
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 </beans>
