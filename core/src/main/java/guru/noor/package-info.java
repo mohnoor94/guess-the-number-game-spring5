@@ -75,3 +75,8 @@ package guru.noor;
 // - Unlike the typical case (with no circular dependencies), a circular dependency between bean A and bean B will
 // force one of the beans to be injected into the other prior to being fully initialized itself (this is a classic
 // chicken/egg scenario).
+
+
+// =====================================================================================================================
+
+// @Autowired: Constructor Injection is recommended over field injections.
