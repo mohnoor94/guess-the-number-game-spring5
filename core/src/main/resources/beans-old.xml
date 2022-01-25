@@ -1,0 +1,39 @@
+<!--NOT-USED anymore-->
+
+<!--<?xml version="1.0" encoding="UTF-8"?>-->
+<!--<beans xmlns="http://www.springframework.org/schema/beans"-->
+<!--       xmlns:context="http://www.springframework.org/schema/context"-->
+<!--       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"-->
+<!--       xsi:schemaLocation="http://www.springframework.org/schema/beans-->
+<!--        https://www.springframework.org/schema/beans/spring-beans.xsd-->
+<!--        http://www.springframework.org/schema/context-->
+<!--        http://www.springframework.org/schema/context/spring-context.xsd">-->
+
+<!--    &lt;!&ndash;    In beans, we can have:&ndash;&gt;-->
+<!--    &lt;!&ndash;    default-init-method="reset"&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    Check for beans in configs&ndash;&gt;-->
+<!--    &lt;!&ndash;    <context:annotation-config/>&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    Check for beans/components by scanning (annotations)&ndash;&gt;-->
+<!--    <context:component-scan base-package="guru.noor"/>-->
+
+<!--    &lt;!&ndash;    <bean id="numberGenerator" class="guru.noor.NumberGeneratorImpl"/>&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    Bean lifecycle callbacks:&ndash;&gt;-->
+<!--    &lt;!&ndash;    - init-method&ndash;&gt;-->
+<!--    &lt;!&ndash;    - destroy-method&ndash;&gt;-->
+<!--    &lt;!&ndash;    ** We can set them using annotations in the classes too (better than XML ofc).&ndash;&gt;-->
+<!--    &lt;!&ndash;    but we need to define CommonAnnotationBeanPostProcessor bean and use the javax annotations api dependency&ndash;&gt;-->
+<!--    &lt;!&ndash;    <bean id="game" class="guru.noor.GameImpl">&ndash;&gt;-->
+<!--    &lt;!&ndash; inject a bean of the referenced bean in the constructor &ndash;&gt;-->
+<!--    &lt;!&ndash; <constructor-arg ref="numberGenerator"/> &ndash;&gt;-->
+
+<!--    &lt;!&ndash; inject a bean of the referenced bean in the setter of the given name &ndash;&gt;-->
+<!--    &lt;!&ndash;    not needed with instance wiring: @AutoWired ...&ndash;&gt;-->
+<!--    &lt;!&ndash;        <property name="numberGenerator" ref="numberGenerator"/>&ndash;&gt;-->
+<!--    &lt;!&ndash;    </bean>&ndash;&gt;-->
+
+<!--    &lt;!&ndash;    not needed with instance wiring: @AutoWired ...&ndash;&gt;-->
+<!--    &lt;!&ndash;    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>&ndash;&gt;-->
+<!--</beans>-->
