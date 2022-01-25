@@ -80,3 +80,10 @@ package guru.noor;
 // =====================================================================================================================
 
 // @Autowired: Constructor Injection is recommended over field injections.
+
+// Components Scanning -
+// Stereotypes:
+// - @Component (bean) - generic
+// - @Repository - persistence layer
+// - @Service - service layer
+// - @Controller - presentation layer
