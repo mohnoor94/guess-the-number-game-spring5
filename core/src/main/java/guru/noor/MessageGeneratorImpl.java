@@ -3,13 +3,14 @@ package guru.noor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
+@Component
 public class MessageGeneratorImpl implements MessageGenerator {
     private static final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 
-    @SuppressWarnings("SpringJavaAutowiredMembersInspection")
     @Autowired
     private Game game;
 
