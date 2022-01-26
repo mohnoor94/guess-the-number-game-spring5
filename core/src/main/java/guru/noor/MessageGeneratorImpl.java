@@ -1,20 +1,17 @@
 package guru.noor;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.PostConstruct;
 
 @Component
+@Slf4j
+@AllArgsConstructor
 public class MessageGeneratorImpl implements MessageGenerator {
-    private static final Logger log = LoggerFactory.getLogger(MessageGeneratorImpl.class);
 
     private final Game game;
-
-    public MessageGeneratorImpl(Game game) {
-        this.game = game;
-    }
 
     @PostConstruct
     public void init() {
