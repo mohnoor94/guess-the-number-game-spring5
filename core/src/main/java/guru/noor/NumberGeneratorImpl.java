@@ -2,7 +2,6 @@ package guru.noor;
 
 import guru.noor.qualifier.MaxNumber;
 import guru.noor.qualifier.MinNumber;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import java.util.Random;
@@ -11,13 +10,13 @@ import java.util.Random;
 public class NumberGeneratorImpl implements NumberGenerator {
     private final Random random = new Random();
 
-    @Autowired
-    @MaxNumber
-    private int maxNumber;
+    private final int maxNumber;
+    private final int minNumber;
 
-    @Autowired
-    @MinNumber
-    private int minNumber;
+    public NumberGeneratorImpl(@MaxNumber int maxNumber, @MinNumber int minNumber) {
+        this.maxNumber = maxNumber;
+        this.minNumber = minNumber;
+    }
 
     @Override
     public int next() {

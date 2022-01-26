@@ -80,6 +80,9 @@ package guru.noor;
 // =====================================================================================================================
 
 // @Autowired: Constructor Injection is recommended over field injections.
+// Starting with Spring 4.3, you don't even need the @Autowired annotation on constructors. If your bean only has one
+// constructor with managed bean arguments, Spring will automatically inject the managed dependencies even without the
+// annotation.
 
 // Components Scanning -
 // Stereotypes:
