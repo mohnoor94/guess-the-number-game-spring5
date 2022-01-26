@@ -1,6 +1,7 @@
 package guru.noor;
 
 import guru.noor.qualifier.MaxNumber;
+import guru.noor.qualifier.MinNumber;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Random;
@@ -13,13 +14,22 @@ public class NumberGeneratorImpl implements NumberGenerator {
     @MaxNumber
     private int maxNumber;
 
+    @Autowired
+    @MinNumber
+    private int minNumber;
+
     @Override
     public int next() {
-        return random.nextInt(maxNumber);
+        return random.nextInt(minNumber, maxNumber + 1);
     }
 
     @Override
     public int getMaxNumber() {
         return maxNumber;
+    }
+
+    @Override
+    public int getMinNumber() {
+        return minNumber;
     }
 }

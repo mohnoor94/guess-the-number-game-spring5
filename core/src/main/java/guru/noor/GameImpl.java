@@ -31,8 +31,8 @@ public class GameImpl implements Game {
     // https://levelup.gitconnected.com/stop-using-postconstruct-in-your-java-applications-2a66fb202cb8
     @Override
     public void reset() {
-        smallest = 0;
-        guess = 0;
+        smallest = numberGenerator.getMinNumber();
+        guess = smallest;
         remainingGuesses = guessCount;
         biggest = numberGenerator.getMaxNumber();
         number = numberGenerator.next();
